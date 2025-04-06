@@ -1,0 +1,119 @@
+@use "utils";
+@use "media";
+
+.success-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  z-index: 70;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: rgba(black, 0.5);
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 2.6rem;
+  }
+}
+
+.success-modal__content {
+  width: 100%;
+  margin: auto;
+  max-width: 54rem;
+  border-radius: 2.5rem;
+  border: 1px solid rgba(17, 63, 114, 0.5);
+  background: #f5f6fa;
+  position: relative;
+  padding: 4rem;
+
+  @include media.breakpoint(mobile) {
+    max-width: none;
+    padding: 2.6rem;
+    padding-bottom: 4rem;
+    padding-top: 6rem;
+  }
+}
+
+.success-modal__close {
+  position: absolute;
+  right: 2.4rem;
+  top: 2.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.success-modal__message {
+  @include media.breakpointMF(small-tablet) {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-radius: 9.7rem;
+    background: #113f72;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.2);
+    gap: 3rem;
+    color: white;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  @include media.breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    text-align: center;
+    color: var(--primary-color);
+  }
+}
+
+.success-modal__icon {
+  flex-shrink: 0;
+  @include media.breakpoint(mobile) {
+    display: grid;
+    place-items: center;
+    width: 8.8rem;
+    height: 8.8rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    align-self: center;
+  }
+}
+
+.success-modal__icon-image {
+  width: 3.4rem;
+  height: 3.2rem;
+  object-fit: contain;
+}

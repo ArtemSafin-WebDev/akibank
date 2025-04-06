@@ -1,0 +1,105 @@
+@use "utils";
+@use "media";
+
+.advantages {
+  @include utils.blockWrapper();
+  margin-bottom: 10rem;
+  @include media.breakpoint(mobile) {
+    margin-bottom: 5rem;
+  }
+}
+
+.advantages__content {
+  @include utils.blockContent();
+  display: flex;
+  flex-direction: column;
+  border-radius: 4rem;
+  background: #fff;
+  box-shadow: 0rem 0rem 8rem 0rem rgba(0, 0, 0, 0.06);
+  padding: 4rem 6rem;
+  @include media.breakpoint(mobile) {
+    border-radius: 3rem;
+    background: #fff;
+    box-shadow: 0rem 0rem 8rem 0rem rgba(0, 0, 0, 0.06);
+    padding: 3rem;
+  }
+}
+
+.advantages__heading {
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 3rem;
+  @include media.breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: 3rem;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 2rem;
+  margin: 0 -2rem;
+  @include media.breakpoint(mobile) {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  align-items: center;
+  @include media.breakpoint(mobile) {
+    flex-direction: row;
+    gap: 2rem;
+    text-align: left;
+  }
+}
+
+.advantages__card-icon-wrapper {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 2.5rem;
+  background: #fff;
+  box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.06),
+    0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  @include media.breakpoint(mobile) {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.06),
+      0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.06);
+  }
+}
+
+.advantages__card-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.advantages__card-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+@use "media";
+
+:root {
+  --primary-color: rgba(17, 63, 114, 1);
+  --text-color: rgba(46, 46, 46, 1);
+  --bg-color: rgb(251, 251, 251);
+  --red: #de5638;
+  --green: #12c08c;
+  --inter: "Inter", sans-serif;
+  --content-padding: 4rem;
+  --container-width: 120rem;
+
+  @include media.breakpoint(mobile) {
+    --content-padding: 1.5rem;
+  }
+}

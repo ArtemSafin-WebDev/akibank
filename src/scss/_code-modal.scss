@@ -1,0 +1,223 @@
+@use "utils";
+@use "media";
+
+.code-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  z-index: 70;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: rgba(black, 0.5);
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 2.6rem;
+  }
+}
+
+.code-modal__inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 34.4rem;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 4.4rem;
+  margin: auto;
+  @include media.breakpoint(mobile) {
+    padding: 2rem;
+    padding-top: 6.2rem;
+    max-width: none;
+  }
+}
+
+.code-modal__close {
+  position: absolute;
+  right: 2.4rem;
+  top: 2.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.code-modal__logo {
+  align-self: center;
+  width: 18rem;
+  margin-bottom: 3.4rem;
+  align-self: center;
+  @include media.breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.code-modal__image {
+  width: 16.6rem;
+  height: auto;
+  margin-bottom: 1.9rem;
+  align-self: center;
+  @include media.breakpoint(mobile) {
+    margin-bottom: 2.1rem;
+    width: 14.7136rem;
+  }
+}
+
+.code-modal__title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.code-modal__text {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  color: #585858;
+  margin-bottom: 2rem;
+  @include media.breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin-bottom: 2rem;
+  }
+}
+
+.code-modal__inputs {
+}
+
+.code-modal__inputs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 1.5rem;
+  @include media.breakpoint(mobile) {
+    grid-gap: 1rem;
+  }
+}
+
+.code-modal__input {
+  border-radius: 1rem;
+  background: #f5f6fa;
+  width: 5rem;
+  height: 8rem;
+  text-align: center;
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  transition: color 0.2s;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.code-modal__new-code {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  color: #a1a1a1;
+  margin-top: 0.6rem;
+  @include media.breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin-top: 0.5rem;
+  }
+}
+
+.code-modal__submit {
+  text-align: center;
+
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid #fff;
+  background: var(--primary-color);
+  transition: color 0.2s, background-color 0.2s;
+  color: white;
+  align-self: center;
+  margin-top: 2rem;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: #1c5da5;
+    }
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.code-modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-modal__status {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  color: #de5638;
+  margin-top: 0.6rem;
+  min-height: 1.3rem;
+  text-align: center;
+  @include media.breakpoint(mobile) {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+  }
+}

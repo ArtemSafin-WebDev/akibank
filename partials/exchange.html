@@ -1,0 +1,373 @@
+<section class="exchange">
+    <div class="exchange__content">
+        <div class="exchange__top-row">
+            <div class="exchange__nav">
+                <div class="exchange__nav-inner">
+
+                    <button class="exchange__nav-btn active" type="button">
+                        Я покупаю
+                    </button>
+                    <button class="exchange__nav-btn" type="button">
+                        Я продаю
+                    </button>
+                    <span class="exchange__nav-marker" data-flip-id="marker"></span>
+                </div>
+
+            </div>
+            <div class="exchange__secure">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#secure"></use>
+                </svg>
+                Гарантируем безопасность данных
+            </div>
+        </div>
+        <div class="exchange__tabs">
+            <div class="exchange__tabs-item active">
+                <form action="/" class="exchange__form">
+                    <div class="exchange__form-left-col">
+                        <div class="exchange__form-fields">
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-input-wrapper">
+                                    <input type="text" class="exchange__form-input" name="your-name" placeholder="Имя"
+                                        required="">
+                                </div>
+                                <div class="exchange__form-remark">
+                                    Поле обязательно для заполнения
+                                </div>
+                            </div>
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-currency-field-wrapper">
+                                    <input type="text" inputmode="numeric" class="exchange__form-input" name="amount"
+                                        placeholder="Сумма" required="" pattern="[0-9]+">
+                                    <div class="exchange__form-currency-selector js-select">
+                                        <button class="exchange__form-currency-selector-btn" type="button">
+                                            <span class="exchange__form-currency-selector-btn-text js-btn-text">
+                                                USD
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#accordion-arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="exchange__form-currency-selector-dropdown">
+                                            <div class="exchange__form-currency-selector-dropdown-inner">
+                                                <ul class="exchange__form-currency-selector-list">
+                                                    <li class="exchange__form-currency-selector-list-item">
+                                                        <label class="exchange__form-currency-selector-radio">
+                                                            <input type="radio" name="currency" value="USD"
+                                                                class="exchange__form-currency-selector-radio-input"
+                                                                checked="" data-rate="86.99">
+                                                            <span class="exchange__form-currency-selector-radio-text">
+                                                                USD
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="exchange__form-currency-selector-list-item">
+                                                        <label class="exchange__form-currency-selector-radio">
+                                                            <input type="radio" name="currency" value="EUR"
+                                                                class="exchange__form-currency-selector-radio-input"
+                                                                data-rate="96.39">
+                                                            <span class="exchange__form-currency-selector-radio-text">
+                                                                EUR
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exchange__form-remark">
+                                    Поле обязательно для заполнения
+                                </div>
+                            </div>
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-input-wrapper">
+                                    <input type="tel" class="exchange__form-input" name="your-phone"
+                                        placeholder="Телефон" required="">
+                                </div>
+                                <div class="exchange__form-remark">
+                                    Поле обязательно для заполнения
+                                </div>
+                            </div>
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-address-field-wrapper">
+                                    <div class="exchange__form-address-field-select js-select"
+                                        data-placeholder="Офис выдачи валюты" data-required-select="">
+                                        <button class="exchange__form-address-field-select-btn" type="button">
+                                            <span class="exchange__form-address-field-select-btn-text">
+                                                <span
+                                                    class="exchange__form-address-field-select-btn-text-inner js-btn-text">
+
+                                                </span>
+                                            </span>
+                                            <span class="exchange__form-address-field-select-btn-arrow">
+                                                <svg width="14" height="14" aria-hidden="true">
+                                                    <use xlink:href="#accordion-arrow"></use>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="exchange__form-address-field-select-dropdown">
+                                            <div class="exchange__form-address-field-select-dropdown-inner">
+                                                <ul class="exchange__form-address-list">
+                                                    <li class="exchange__form-address-list-item">
+                                                        <label class="exchange__form-address-radio">
+                                                            <input type="radio" name="address"
+                                                                class="exchange__form-address-radio-input"
+                                                                value="г. Казань, ул. Пушкина, д. 18">
+                                                            <span class="exchange__form-address-radio-schedule">
+                                                                (открыто до 22:00)
+                                                            </span>
+                                                            <span class="exchange__form-address-radio-title">
+                                                                г. Казань, ул. Пушкина, д. 18
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                    <li class="exchange__form-address-list-item">
+                                                        <label class="exchange__form-address-radio">
+                                                            <input type="radio" name="address"
+                                                                class="exchange__form-address-radio-input"
+                                                                value="г. Казань, ул. Пушкина, д. 18">
+                                                            <span class="exchange__form-address-radio-schedule">
+                                                                (открыто до 22:00)
+                                                            </span>
+                                                            <span class="exchange__form-address-radio-title">
+                                                                г. Казань, ул. Пушкина, д. 18
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exchange__form-remark">
+                                        Поле обязательно для заполнения
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="exchange__form-policy">
+                            <label class="exchange__form-policy-checkbox">
+                                <input type="checkbox" name="policy" value="Y" class="exchange__form-policy-input"
+                                    checked="" required="">
+                                <span class="exchange__form-policy-mark">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="exchange__form-policy-text">
+                                    Я согласен с условиями <a href="#">обработки и передачи данных</a>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="exchange__form-submit" type="submit">
+                            Отправить заявку
+                        </button>
+                    </div>
+                    <div class="exchange__form-right-col">
+                        <div class="exchange__calculation">
+                            <h3 class="exchange__calculation-heading">
+                                Предварительный расчет по текущему курсу
+                            </h3>
+                            <div class="exchange__calculation-first-currency">
+                                <h4 class="exchange__calculation-first-currency-title">
+                                    Я получу
+                                </h4>
+                                <div class="exchange__calculation-first-currency-amount">
+                                    435 $
+                                </div>
+                            </div>
+                            <div class="exchange__calculation-second-currency">
+                                <h4 class="exchange__calculation-second-currency-title">
+                                    Я отдам
+                                </h4>
+                                <div class="exchange__calculation-second-currency-rate">
+                                    <span class="exchange__calculation-second-currency-rate-per-one">1.00 $</span>=<span
+                                        class="exchange__calculation-second-currency-rate-text">89,70</span>
+                                </div>
+                                <div class="exchange__calculation-second-currency-amount">
+                                    39 021,75 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="exchange__tabs-item">
+                <form action="/" class="exchange__form">
+                    <div class="exchange__form-left-col">
+                        <div class="exchange__form-fields">
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-input-wrapper">
+                                    <input type="text" class="exchange__form-input" name="your-name" placeholder="Имя"
+                                        required="">
+                                </div>
+                                <div class="exchange__form-remark">
+                                    Поле обязательно для заполнения
+                                </div>
+                            </div>
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-currency-field-wrapper">
+                                    <input type="text" inputmode="numeric" class="exchange__form-input" name="amount"
+                                        placeholder="Сумма" required="" pattern="[0-9]+">
+                                    <div class="exchange__form-currency-selector js-select">
+                                        <button class="exchange__form-currency-selector-btn" type="button">
+                                            <span class="exchange__form-currency-selector-btn-text js-btn-text">
+                                                USD
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#accordion-arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="exchange__form-currency-selector-dropdown">
+                                            <div class="exchange__form-currency-selector-dropdown-inner">
+                                                <ul class="exchange__form-currency-selector-list">
+                                                    <li class="exchange__form-currency-selector-list-item">
+                                                        <label class="exchange__form-currency-selector-radio">
+                                                            <input type="radio" name="currency" value="USD"
+                                                                class="exchange__form-currency-selector-radio-input"
+                                                                checked="" data-rate="86.02">
+                                                            <span class="exchange__form-currency-selector-radio-text">
+                                                                USD
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="exchange__form-currency-selector-list-item">
+                                                        <label class="exchange__form-currency-selector-radio">
+                                                            <input type="radio" name="currency" value="EUR"
+                                                                class="exchange__form-currency-selector-radio-input"
+                                                                data-rate="94.05">
+                                                            <span class="exchange__form-currency-selector-radio-text">
+                                                                EUR
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exchange__form-remark">
+                                    Поле обязательно для заполнения
+                                </div>
+                            </div>
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-input-wrapper">
+                                    <input type="tel" class="exchange__form-input" name="your-phone"
+                                        placeholder="Телефон" required="">
+                                </div>
+                                <div class="exchange__form-remark">
+                                    Поле обязательно для заполнения
+                                </div>
+                            </div>
+                            <div class="exchange__form-field">
+                                <div class="exchange__form-address-field-wrapper">
+                                    <div class="exchange__form-address-field-select js-select"
+                                        data-placeholder="Офис выдачи валюты" data-required-select="">
+                                        <button class="exchange__form-address-field-select-btn" type="button">
+                                            <span class="exchange__form-address-field-select-btn-text">
+                                                <span
+                                                    class="exchange__form-address-field-select-btn-text-inner js-btn-text">
+
+                                                </span>
+                                            </span>
+                                            <span class="exchange__form-address-field-select-btn-arrow">
+                                                <svg width="14" height="14" aria-hidden="true">
+                                                    <use xlink:href="#accordion-arrow"></use>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <div class="exchange__form-address-field-select-dropdown">
+                                            <div class="exchange__form-address-field-select-dropdown-inner">
+                                                <ul class="exchange__form-address-list">
+                                                    <li class="exchange__form-address-list-item">
+                                                        <label class="exchange__form-address-radio">
+                                                            <input type="radio" name="address"
+                                                                class="exchange__form-address-radio-input"
+                                                                value="г. Казань, ул. Пушкина, д. 18">
+                                                            <span class="exchange__form-address-radio-schedule">
+                                                                (открыто до 22:00)
+                                                            </span>
+                                                            <span class="exchange__form-address-radio-title">
+                                                                г. Казань, ул. Пушкина, д. 18
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                    <li class="exchange__form-address-list-item">
+                                                        <label class="exchange__form-address-radio">
+                                                            <input type="radio" name="address"
+                                                                class="exchange__form-address-radio-input"
+                                                                value="г. Казань, ул. Пушкина, д. 18">
+                                                            <span class="exchange__form-address-radio-schedule">
+                                                                (открыто до 22:00)
+                                                            </span>
+                                                            <span class="exchange__form-address-radio-title">
+                                                                г. Казань, ул. Пушкина, д. 18
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exchange__form-remark">
+                                        Поле обязательно для заполнения
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="exchange__form-policy">
+                            <label class="exchange__form-policy-checkbox">
+                                <input type="checkbox" name="policy" value="Y" class="exchange__form-policy-input"
+                                    checked="" required="">
+                                <span class="exchange__form-policy-mark">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="exchange__form-policy-text">
+                                    Я согласен с условиями <a href="#">обработки и передачи данных</a>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="exchange__form-submit" type="submit">
+                            Отправить заявку
+                        </button>
+                    </div>
+                    <div class="exchange__form-right-col">
+                        <div class="exchange__calculation">
+                            <h3 class="exchange__calculation-heading">
+                                Предварительный расчет по текущему курсу
+                            </h3>
+                            <div class="exchange__calculation-first-currency">
+                                <h4 class="exchange__calculation-first-currency-title">
+                                    У меня есть
+                                </h4>
+                                <div class="exchange__calculation-first-currency-amount">
+                                    435 $
+                                </div>
+                            </div>
+                            <div class="exchange__calculation-second-currency">
+                                <h4 class="exchange__calculation-second-currency-title">
+                                    Я получу
+                                </h4>
+                                <div class="exchange__calculation-second-currency-rate">
+                                    <span class="exchange__calculation-second-currency-rate-per-one">1.00 $</span>=<span
+                                        class="exchange__calculation-second-currency-rate-text">89,70</span>
+                                </div>
+                                <div class="exchange__calculation-second-currency-amount">
+                                    39 021,75 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

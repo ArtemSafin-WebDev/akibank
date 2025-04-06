@@ -1,0 +1,128 @@
+@use "utils";
+@use "media";
+
+.city-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  z-index: 70;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: rgba(black, 0.5);
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 2.6rem;
+  }
+}
+
+.city-modal__content {
+  width: 100%;
+  margin: auto;
+  max-width: 32rem;
+  border-radius: 2.5rem;
+  border: 1px solid rgba(17, 63, 114, 0.5);
+  background: #f5f6fa;
+  position: relative;
+  padding: 4rem;
+
+  @include media.breakpoint(mobile) {
+    padding: 4rem 2rem;
+    max-width: none;
+  }
+}
+
+.city-modal__close {
+  position: absolute;
+  right: 2.4rem;
+  top: 2.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.city-modal__title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 2.4rem;
+  @include media.breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+  }
+}
+
+.city-modal__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-modal__list-item {
+  border-bottom: 1px solid rgba(17, 63, 114, 0.2);
+  &:last-child {
+    border: none;
+  }
+}
+
+.city-modal__link {
+  padding: 1.5rem 0;
+  display: block;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  .city-modal__list-item:first-child & {
+    padding-top: 0;
+  }
+  .city-modal__list-item:last-child & {
+    padding-bottom: 0;
+  }
+
+  &:not(.active):hover {
+    color: var(--primary-color);
+  }
+
+  &.active {
+    color: #bb9434;
+    cursor: default;
+  }
+}
