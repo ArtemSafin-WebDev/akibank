@@ -148,10 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
     inputFields[0].focus();
   }
 
-  if (mainForm) {
+  /*if (mainForm) {
     mainForm.addEventListener("submit:valid", () => {
       codeModal.classList.add("active");
       document.body.classList.add("modal-open");
     });
-  }
+  }*/
 });
